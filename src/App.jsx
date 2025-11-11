@@ -1,11 +1,13 @@
 import { useState } from "react";
 import "./App.css";
+import Nav from "./Components/Nav/Nav";
+import Home from "./Components/Home/Home";
 
 function App() {
   return (
     <>
-      <h2>WELCOME TO OUR COLLAB PROJECT</h2>
-      <p>now</p>
+      <Nav />
+      <Home />
     </>
   );
 }
