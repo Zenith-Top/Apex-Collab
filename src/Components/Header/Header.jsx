@@ -6,8 +6,7 @@ import { Autoplay, Parallax } from "swiper/modules";
 
 const Header = () => {
   return (
-    <>
-      <div className="app_container">
+    <>   
         <div className="header_wrapper">
           <Swiper
             slidesPerView={1}
@@ -52,7 +51,6 @@ const Header = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-      </div>
     </>
   );
 };

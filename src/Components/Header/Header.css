@@ -49,7 +49,7 @@
 
 .Header_slide .header_content small {
   color: #fff;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .Header_slide .header_content h2 {
@@ -59,4 +59,29 @@
 
 .Header_slide .header_content h2 span {
   color: #cb5c00;
+}
+
+@media screen and (max-width: 768px) {
+  .Header_slide .header_content {
+    bottom: 14%;
+  }
+
+  /* .Header_slide .header_content h2 {
+    font-size: 20px;
+  } */
+}
+
+@media screen and (max-width: 500px) {
+  .Header_slide .header_content h2 {
+    font-size: 20px;
+  }
+
+  .Header_slide .header_content small {
+    font-size: 14px;
+  }
+
+  .btn-sm {
+    height: 30px;
+    width: 100px;
+  }
 }

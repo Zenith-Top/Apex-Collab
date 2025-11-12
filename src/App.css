@@ -1,10 +1,11 @@
 /* Google Font: Poppins*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Poppins:wght@400;500;600&display=swap");
 
 * {
   padding: 0;
   margin: 0;
-  font-family: poppins, sans-serif;
+  font-family: "poppins", sans-serif;
 
   list-style: none;
 
@@ -56,4 +57,30 @@ button {
   border: 1px solid #fff;
   background-color: transparent;
   transform: scale(0.95);
+}
+
+.section {
+  padding: 90px 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section_Title {
+  font-size: 25px;
+  font-family: "Momo Trust Display", "poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #1e1e1e;
+}
+
+.section_Title span {
+  color: #9d7e54;
+  font-family: "Momo Trust Display", "poppins", sans-serif;
+}
+
+.section_Heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e1e1e;
 }
