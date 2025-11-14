@@ -63,6 +63,10 @@ h3 {
   cursor: pointer;
 }
 
+.icons:hover {
+  transform: translateY(-5px);
+}
+
 @media screen and (max-width: 900px) {
   .footer_wrapper {
     grid-template-columns: repeat(2, 1fr);
