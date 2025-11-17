@@ -135,12 +135,20 @@
 }
 
 @media screen and (max-width: 500px) {
+  .nav_wrapper {
+    gap: 5px;
+  }
+
   .btn-lg {
-    height: 35px;
-    width: 100px;
+    height: 30px;
+    width: 80px;
   }
 
   #menu_bar {
-    height: 35px;
+    height: 30px;
+  }
+
+  .nav_btns {
+    gap: 5px;
   }
 }

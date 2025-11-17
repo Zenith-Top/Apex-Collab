@@ -28,26 +28,26 @@ const Nav = () => {
     <>
       <div className={`nav_wrapper ${isScrolled ? "scrolled" : ""}`}>
         <div className="logo">
-          <Link to>
+          <Link to="/">
             <span>Apex</span>Hotels
           </Link>
         </div>
 
         <ul className={isToggled ? "showNav" : ""}>
           <li>
-            <Link>Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link>Rooms</Link>
+            <Link to="/rooms">Rooms</Link>
           </li>
           <li>
-            <Link>Specials</Link>
+            <Link to="/specials">Specials</Link>
           </li>
           <li>
-            <Link>About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link>Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
 
@@ -60,8 +60,10 @@ const Nav = () => {
           >
             <FaBarsStaggered />
           </i>
-          <button className=" btn-lg">Sign In</button>
-          <button className=" btn-lg">Sign Up</button>
+          <button className=" btn-lg">
+            <Link to="/sign_in">Sign In</Link>
+          </button>
+          <button className=" btn-lg"><Link to="/sign_up">Sign Up</Link></button>
         </div>
       </div>
     </>
