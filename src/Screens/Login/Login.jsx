@@ -1,11 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Login/Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { TiVendorMicrosoft } from "react-icons/ti";
+import { InfinitySpin } from "react-loader-spinner";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const api = "https://students-learning-api.onrender.com/api/auth/login";
+  const payload = {
+    email,
+    password,
+  };
+
+  const loginLogic = async () => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+    try {
+      const data = await axios.post(api, payload);
+      console.log(data);
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <div className="screen_con">
@@ -14,23 +42,44 @@ const Login = () => {
 
           <div className="col_2">
             <div className="form_box">
-              <h1> Sign In</h1>
-              <form>
-                {/* Put your onSubmit action here */}
+              <h1> {error ? error : "Sign In"} </h1>
+
+              {/* Put your onSubmit action here */}
+              <form onSubmit={loginLogic}>
                 <div className="user_box">
-                  <input type="text" id="email" required />
+                  <input
+                    label="Email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
                   <label htmlFor="email">Email</label>
                 </div>
                 <div className="user_box">
-                  <input type="password" id="password" required />
+                  <input
+                    label="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
                   <label htmlFor="password">Password</label>
                 </div>
                 <div className="remember">
                   <input type="checkbox" /> Remember Me
                 </div>
-                <Link to="/" className="submit-btn">
-                  Login
-                </Link>
+                <button className="submit-btn">
+                  {loading ? (
+                    <InfinitySpin
+                      color="#fff"
+                      size={10}
+                      width={100}
+                      loading={loading}
+                    />
+                  ) : (
+                    "Login"
+                  )}
+                </button>
                 <div className="switch">
                   <span>Don't have an account?</span>
                   <Link to="/sign_up">Sign Up</Link>

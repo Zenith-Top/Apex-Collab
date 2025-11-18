@@ -1,8 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Register/Register.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { InfinitySpin } from "react-loader-spinner";
 
 const Register = () => {
+  const navigate = useNavigate;
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [password, setPassword] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const api = "https://students-learning-api.onrender.com/api/auth";
+  const payload = {
+    firstName,
+    lastName,
+    email,
+    phoneNumber,
+    address,
+    password,
+  };
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+    try {
+      const res = await axios.post(api, payload);
+      console.log(res);
+      navigate("/sign_in");
+    } catch (error) {
+      console.error(error.response.data.error);
+      setError(error.response.data.error);
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <div className="screen_con">
@@ -12,36 +47,78 @@ const Register = () => {
 
           <div className="col_2">
             <div className="form_box">
-              <h1> Create an Account</h1>
-              <form>
-                {/* Put your onSubmit action here */}
+              <h1>{error ? errror : "Create an Account"}</h1>
+
+              {/* Put your onSubmit action here */}
+              <form onSubmit={handleRegister}>
                 <div className="user_box">
-                  <input type="text" id="firstname" required />
+                  <input
+                    type="firstname"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    required
+                  />
                   <label htmlFor="firstname">First Name</label>
                 </div>
                 <div className="user_box">
-                  <input type="text" id="lastname" required />
+                  <input
+                    type="lastname"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    required
+                  />
                   <label htmlFor="lastname">Last Name</label>
                 </div>
                 <div className="user_box">
-                  <input type="text" id="email" required />
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
                   <label htmlFor="email">Email</label>
                 </div>
                 <div className="user_box">
-                  <input type="password" id="password" required />
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
                   <label htmlFor="password">Password</label>
                 </div>
                 <div className="user_box">
-                  <input type="tel" id="phonenumber" required />
+                  <input
+                    type="phonenumber"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    required
+                  />
                   <label htmlFor="phonenumber">Phone Number</label>
                 </div>
                 <div className="user_box">
-                  <input type="text" id="address" required />
+                  <input
+                    type="address"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                    required
+                  />
                   <label htmlFor="address">Address</label>
                 </div>
-                <Link to="/sign_in" className="submit-btn">
-                  Register
-                </Link>
+                <button className="submit-btn">
+                  {loading ? (
+                    <InfinitySpin
+                      color="#fff"
+                      size={80}
+                      width={40}
+                      height={40}
+                      margin={0}
+                      loading={loading}
+                    />
+                  ) : (
+                    "Register"
+                  )}
+                </button>
 
                 <div className="switch">
                   <span>Already have an account?</span>

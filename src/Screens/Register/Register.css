@@ -7,7 +7,7 @@
   margin-bottom: 40px;
 }
 
-.register .form_box form a.submit-btn {
+.register .form_box form .submit-btn {
   margin: 10px 0 5px;
 }
 
@@ -39,7 +39,7 @@
     font-size: 33px;
   }
 
-  .register .form_box form a.submit-btn {
+  .register .form_box form .submit-btn {
     margin: 5px 0;
   }
 }
@@ -72,7 +72,7 @@
     margin: 0px 10px;
   }
 
-  .register form a.submit-btn {
+  .register form .submit-btn {
     padding: 15px 100px;
   }
 }

@@ -29,7 +29,9 @@ const Header = () => {
                   Enjoy your <span>Dream</span> Time with <br />
                   <span>Luxury</span> experience
                 </h2>
-                <button className="btn-sm book_btn">Book Now</button>
+                <button className="btn-sm ">
+                  <Link to="/book">Book Now</Link>
+                </button>
               </div>
             </div>
           </SwiperSlide>

@@ -4,6 +4,7 @@ import { Swiper } from "swiper/react";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 import Pool_Img from "../../assets/Pool.jpg";
 import Gym_Img from "../../assets/Gym.jpg";
@@ -45,7 +46,9 @@ const Amenities = () => {
                   atmosphere complete with loungers for soaking up the sun and
                   refreshing dips.
                 </p>
-                <button className="btn-sm">Book Now</button>
+                <button className="btn-sm">
+                  <Link to="/book">Book Now</Link>
+                </button>
               </div>
             </div>
           </SwiperSlide>
@@ -62,7 +65,9 @@ const Amenities = () => {
                   small, basic rooms to large, well-equipped facilities, serving
                   as a convenient amenity for guests.
                 </p>
-                <button className="btn-sm">Book Now</button>
+                <button className="btn-sm">
+                  <Link to="/book">Book Now</Link>
+                </button>
               </div>
             </div>
           </SwiperSlide>
@@ -80,7 +85,9 @@ const Amenities = () => {
                   seeking to de-stress and recharge through pampering and
                   wellness experiences.
                 </p>
-                <button className="btn-sm">Book Now</button>
+                <button className="btn-sm">
+                  <Link to="/book">Book Now</Link>
+                </button>
               </div>
             </div>
           </SwiperSlide>
@@ -97,7 +104,9 @@ const Amenities = () => {
                   activity and relaxation, catering to guests who want to
                   maintain their health during their stay.
                 </p>
-                <button className="btn-sm">Book Now</button>
+                <button className="btn-sm">
+                  <Link to="/book">Book Now</Link>
+                </button>
               </div>
             </div>
           </SwiperSlide>
@@ -113,7 +122,9 @@ const Amenities = () => {
                   cocktails, all in one convenient, accessible location for
                   guests and visitors.
                 </p>
-                <button className="btn-sm">Book Now</button>
+                <button className="btn-sm">
+                  <Link to="/book">Book Now</Link>
+                </button>
               </div>
             </div>
           </SwiperSlide>
@@ -131,7 +142,9 @@ const Amenities = () => {
                   themed rooms and activity stations, allowing for continuous
                   fun year-round.
                 </p>
-                <button className="btn-sm">Book Now</button>
+                <button className="btn-sm">
+                  <Link to="/book">Book Now</Link>
+                </button>
               </div>
             </div>
           </SwiperSlide>

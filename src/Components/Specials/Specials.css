@@ -1,0 +1,75 @@
+.specials_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  /* position: relative; */
+  background: url(../../assets/Trip.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.specials_wrapper h1 {
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 140px;
+  color: #fff;
+  text-shadow: 1px 2px black;
+}
+
+.specials_wrapper p {
+  color: #fff;
+  /* font-weight: 600; */
+  margin-top: -10px;
+  /* text-shadow: 2px 2px rgba(3, 3, 3, 0.041); */
+  text-shadow: 1px 1px rgb(34, 33, 33);
+}
+
+.category-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.category-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.view-btn {
+  width: 210px;
+}
+
+@media screen and (max-width: 800px) {
+  .specials_wrapper h1 {
+    font-size: 115px;
+    text-align: center;
+    margin-top: -150px;
+    word-break: normal;
+  }
+
+  .specials_wrapper p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .specials.shared-div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .category-img {
+    height: 300px;
+  }
+
+  .category-content p {
+    font-size: 16px;
+  }
+}

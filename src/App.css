@@ -1,6 +1,7 @@
 /* Google Font: Poppins*/
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 
 * {
   padding: 0;
@@ -79,7 +80,8 @@ a {
   color: #1e1e1e;
 }
 
-.section_Title span {
+.section_Title span,
+.sub-heading {
   color: #9d7e54;
   font-family: "Momo Trust Display", "poppins", sans-serif;
 }
@@ -133,7 +135,7 @@ form {
   margin-top: 2.3rem;
 }
 
-.form_box h1 {
+.col_2 .form_box h1 {
   font-size: 36px;
   text-align: center;
   align-self: center;
@@ -176,7 +178,7 @@ form {
   font-size: 12px;
 }
 
-.form_box form a.submit-btn {
+.form_box form .submit-btn {
   margin: 0 auto;
   position: relative;
   display: inline-block;
@@ -194,7 +196,7 @@ form {
   border: 3px solid #fff;
 }
 
-.form_box a.submit-btn:hover {
+.form_box .submit-btn:hover {
   background-color: #cb5c00;
   color: #fff;
   border-color: #cb5c00;

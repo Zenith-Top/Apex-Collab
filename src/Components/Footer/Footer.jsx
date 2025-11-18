@@ -18,6 +18,7 @@ const Footer = () => {
               Home to the best hotels, resorts, restaurants spa and bars across
               the country, guaranteed to give the best customer experience.
             </p>
+            <p>Contact and follow us</p>
             <div>
               <i className="icons">
                 <FaFacebook />

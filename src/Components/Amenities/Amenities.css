@@ -51,6 +51,15 @@
   border-radius: 30px;
 }
 
+.amenities_content button:hover {
+  border: 2px solid #cb5c00;
+  color: #000;
+}
+
+.amenities_content button a:hover {
+  color: #000;
+}
+
 @media screen and (max-width: 1200px) {
   .amenities_content h2 {
     font-size: 40px;
