@@ -82,9 +82,11 @@ const Book = () => {
                 {/* Buttons */}
                 <div className="shared-div">
                   <button className="btn-lg book-btn">
-                    <Link to="/home">Confirm Booking</Link>
+                    <Link to="/">Confirm Booking</Link>
                   </button>
-                  <button className="btn-sm">View Info</button>
+                  <button className="btn-sm">
+                    <Link to="/">Go to home</Link>
+                  </button>
                 </div>
               </form>
 

@@ -32,10 +32,10 @@ const Amenities = () => {
           }}
           speed={2000}
           modules={[Autoplay]}
-          className="swiper"
+          className="swiper amenities"
         >
           <SwiperSlide className="amen_slide">
-            <div className="amenities_items">
+            <div className="amenities_items item1">
               <img src={Pool_Img} alt="amenities-img" />
 
               <div className="amenities_content">

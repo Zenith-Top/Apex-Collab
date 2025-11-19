@@ -30,7 +30,7 @@ const Header = () => {
                   <span>Luxury</span> experience
                 </h2>
                 <button className="btn-sm ">
-                  <Link to="/book">Book Now</Link>
+                  <Link to="/sign_in">Book Now</Link>
                 </button>
               </div>
             </div>
@@ -45,7 +45,7 @@ const Header = () => {
                   <span>Luxury</span> experience
                 </h2>
                 <button className="btn-sm">
-                  <Link to="/book">Book Now</Link>
+                  <Link to="/sign_in">Book Now</Link>
                 </button>
               </div>
             </div>

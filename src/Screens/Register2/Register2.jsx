@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import "../Register/Register.css";
+import "./Register2.css";
 import { Link, useNavigate } from "react-router-dom";
 import { InfinitySpin } from "react-loader-spinner";
+import axios from "axios";
 
-const Register = () => {
-  const navigate = useNavigate;
+const Register2 = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -29,7 +30,7 @@ const Register = () => {
     setError("");
     try {
       const res = await axios.post(api, payload);
-      console.log(res);
+      console.log(res.data);
       navigate("/sign_in");
     } catch (error) {
       console.error(error.response.data.error);
@@ -47,7 +48,7 @@ const Register = () => {
 
           <div className="col_2">
             <div className="form_box">
-              <h1>{error ? errror : "Create an Account"}</h1>
+              <h1>{error ? error : "Create an Account"}</h1>
 
               {/* Put your onSubmit action here */}
               <form onSubmit={handleRegister}>
@@ -105,13 +106,13 @@ const Register = () => {
                   />
                   <label htmlFor="address">Address</label>
                 </div>
-                <button className="submit-btn">
+                <button type="submit" className="submit-btn">
                   {loading ? (
                     <InfinitySpin
                       color="#fff"
-                      size={80}
-                      width={40}
-                      height={40}
+                      size={12}
+                      width={100}
+                      height={50}
                       margin={0}
                       loading={loading}
                     />
@@ -133,4 +134,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Register2;

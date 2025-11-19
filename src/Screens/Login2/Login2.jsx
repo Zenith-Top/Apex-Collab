@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import "../Login/Login.css";
+import "./Login2.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { TiVendorMicrosoft } from "react-icons/ti";
 import { InfinitySpin } from "react-loader-spinner";
+import axios from "axios";
 
-const Login = () => {
+const Login2 = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,18 +19,17 @@ const Login = () => {
     password,
   };
 
-  const loginLogic = async () => {
+  const loginLogic = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError("");
     try {
       const data = await axios.post(api, payload);
       console.log(data);
-      navigate("/");
+      navigate("/book");
     } catch (error) {
-      console.log(error);
-      setError(error);
-    } finally {
+      console.error(error.response.data.error);
+      setError(error.response.data.error);
       setLoading(false);
     }
   };
@@ -48,7 +48,7 @@ const Login = () => {
               <form onSubmit={loginLogic}>
                 <div className="user_box">
                   <input
-                    label="Email"
+                    label="email"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -58,7 +58,8 @@ const Login = () => {
                 </div>
                 <div className="user_box">
                   <input
-                    label="Password"
+                    label="password"
+                    type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
@@ -68,12 +69,13 @@ const Login = () => {
                 <div className="remember">
                   <input type="checkbox" /> Remember Me
                 </div>
-                <button className="submit-btn">
+                <button type="submit" className="submit-btn">
                   {loading ? (
                     <InfinitySpin
                       color="#fff"
-                      size={10}
+                      size={12}
                       width={100}
+                      height={50}
                       loading={loading}
                     />
                   ) : (
@@ -108,4 +110,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Login2;

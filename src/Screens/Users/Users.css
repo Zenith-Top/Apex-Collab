@@ -30,11 +30,26 @@
   width: 100%;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
 .table_wrapper {
   width: 100%;
   table-layout: fixed;
   min-width: 900px;
   border-collapse: collapse;
+}
+
+.back-btn:hover {
+  border: 2px solid #cb5c00;
+  color: #000;
+}
+
+.back-btn a:hover {
+  color: #000;
 }
 
 thead th {
@@ -55,6 +70,11 @@ td {
   margin-right: 3%;
 }
 
+td .action-btn {
+  height: 35px;
+  width: 70px;
+}
+
 td .action-btn:nth-child(1) {
   background-color: #9d7e54;
 }
@@ -65,4 +85,53 @@ td .action-btn:nth-child(3) {
 
 td .action-btn:nth-child(2):hover {
   background-color: #cb5c00;
+}
+
+@media screen and (max-width: 1200px) {
+  .table_wrapper {
+    min-width: 600px;
+    font-size: 16px;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  td .action-btn {
+    height: 35px;
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .table_wrapper {
+    min-width: 600px;
+    font-size: 15px;
+  }
+
+  thead th {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .table_wrapper {
+    min-width: 400px;
+    font-size: 16px;
+  }
+  thead th {
+    font-size: 15px;
+  }
+
+  tbody td {
+    font-size: 14px;
+  }
+
+  /* td .action-btn {
+    margin-bottom: 5px;
+  } */
 }
