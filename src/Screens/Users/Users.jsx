@@ -77,10 +77,10 @@ const Users = () => {
                         {user.firstName} {user.lastName}
                       </td>
                       <td>{user.email}</td>
-                      <td className='actions' align="center">
+                      <td className="actions" align="center">
                         <button
                           className="btn-sm action-btn"
-                          // onClick={() => navigate(`/users/${user._id}`)}
+                          onClick={() => navigate(`/users/${user._id}`)}
                         >
                           View
                         </button>
