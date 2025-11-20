@@ -25,7 +25,7 @@ button {
 
 .btn-lg {
   height: 40px;
-  width: 130px;
+  width: 135px;
   border: none;
   background-color: #cb5c00;
   color: #fff;
@@ -163,7 +163,7 @@ form {
 
 .form_box .user_box input {
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 5px;
   font-size: 22px;
   color: #fff;
   margin-bottom: 50px;
