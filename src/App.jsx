@@ -14,6 +14,7 @@ import Specials from "./Components/Specials/Specials";
 import Users from "./Screens/Users/Users";
 import Register2 from "./Screens/Register2/Register2";
 import Login2 from "./Screens/Login2/Login2";
+import ViewUsers from "./Screens/ViewUsers/ViewUsers";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/book" element={<Book />} />
         <Route path="/student_list" element={<Users />} />
+        <Route path="/users/:id" element={<ViewUsers />} />
       </Routes>
 
       {/* <Home /> */}
