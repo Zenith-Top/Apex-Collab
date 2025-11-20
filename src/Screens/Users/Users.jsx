@@ -86,7 +86,7 @@ const Users = () => {
                         </button>
                         <button
                           className="btn-sm action-btn"
-                          //onClick={() => navigate(`/users/edit/${user._id}`)}
+                          onClick={() => navigate(`/users/edit/${user._id}`)}
                         >
                           Edit
                         </button>

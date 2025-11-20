@@ -1,6 +1,6 @@
 .swiper.amenities {
   /* height: auto !important; */
-  height: 50vh !important;
+  min-height: 50vh !important;
   width: 100% !important;
 }
 
