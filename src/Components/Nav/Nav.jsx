@@ -2,9 +2,15 @@ import React, { useEffect, useState } from "react";
 import "../Nav/Nav.css";
 import { Link } from "react-router-dom";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { useLocation } from "react-router-dom";
 
 const Nav = () => {
   const [isToggled, setIsToggled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsToggled(false); // Close menu whenever location changes
+  }, [location]);
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -63,7 +69,9 @@ const Nav = () => {
           <button className=" btn-lg">
             <Link to="/sign_in">Sign In</Link>
           </button>
-          <button className=" btn-lg"><Link to="/sign_up">Sign Up</Link></button>
+          <button className=" btn-lg">
+            <Link to="/sign_up">Sign Up</Link>
+          </button>
         </div>
       </div>
     </>
