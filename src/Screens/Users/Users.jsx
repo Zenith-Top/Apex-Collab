@@ -52,8 +52,8 @@ const Users = () => {
           <div className="table-header-img"></div>
           <div className="table-header">
             <h1>Student List</h1>
-            <button className="btn-lg back-btn">
-              <Link to="/specials">Back</Link>
+            <button className="btn-lg back-btn" onClick={() => navigate(-1)}>
+              Back
             </button>
           </div>
 
