@@ -103,7 +103,7 @@ a {
   backdrop-filter: blur(40px);
 }
 
-.screen_con::after {
+.screen_con::before {
   content: "";
   position: absolute;
   height: 100%;
