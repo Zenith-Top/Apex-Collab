@@ -1,0 +1,87 @@
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 18px;
+  color: #fff;
+}
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 1em;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.socials .icons {
+  border: none;
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  font-size: 25px;
+  color: #000;
+  transition: 1s;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 25%;
+}
+
+.socials i:hover {
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 1000px) {
+  .screen_wrapper.login {
+    grid-template-columns: repeat(1, 1fr);
+    width: 500px;
+    height: 900px;
+  }
+
+  .col_1 {
+    height: 250px;
+  }
+
+  form {
+    margin: 3em auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .screen_wrapper.login {
+    grid-template-columns: repeat(1, 1fr);
+    width: 500px;
+    height: fit-content;
+    margin: 0 2em;
+  }
+
+  .col_1 {
+    height: 100px;
+  }
+
+  form {
+    margin: 1em auto;
+  }
+
+  .form_box h1 {
+    font-size: 30px;
+  }
+
+  .form_box .user_box label {
+    font-size: 20px;
+  }
+}

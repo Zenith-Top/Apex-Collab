@@ -1,0 +1,78 @@
+.screen_wrapper.register {
+  height: 800px;
+}
+
+.register .form_box .user_box input {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.register .form_box form .submit-btn {
+  margin: 10px 0 5px;
+}
+
+.register .form_box .user_box label {
+  font-size: 20px;
+}
+
+.register form .switch {
+  margin: 0em;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 1000px) {
+  .screen_wrapper.register {
+    grid-template-columns: repeat(1, 1fr);
+    width: 500px;
+    height: 900px;
+  }
+
+  .register .col_1 {
+    height: 120px;
+  }
+
+  .register form {
+    margin: 3em auto;
+  }
+
+  .register h1 {
+    font-size: 33px;
+  }
+
+  .register .form_box form .submit-btn {
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .screen_wrapper.register {
+    grid-template-columns: repeat(1, 1fr);
+    width: 500px;
+    height: fit-content;
+    margin: 0 2em;
+  }
+
+  .col_1 {
+    height: 100px;
+  }
+
+  form {
+    margin: 1em auto;
+  }
+
+  .form_box h1 {
+    font-size: 30px;
+  }
+
+  .form_box .user_box label {
+    font-size: 20px;
+  }
+
+  .register .col_2 {
+    margin: 0px 10px;
+  }
+
+  .register form .submit-btn {
+    padding: 15px 100px;
+  }
+}

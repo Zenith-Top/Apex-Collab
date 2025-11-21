@@ -1,5 +1,6 @@
-.swiper {
-  height: 100vh !important;
+.swiper.amenities {
+  /* height: auto !important; */
+  min-height: 50vh !important;
   width: 100% !important;
 }
 
@@ -30,6 +31,10 @@
   border-bottom-left-radius: 30px;
 }
 
+.amenities_items.item1 img {
+  height: 300px;
+}
+
 .amenities_content {
   display: flex;
   flex-direction: column;
@@ -49,6 +54,15 @@
 
 .amenities_content button {
   border-radius: 30px;
+}
+
+.amenities_content button:hover {
+  border: 2px solid #cb5c00;
+  color: #000;
+}
+
+.amenities_content button a:hover {
+  color: #000;
 }
 
 @media screen and (max-width: 1200px) {

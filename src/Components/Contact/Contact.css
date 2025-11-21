@@ -1,0 +1,83 @@
+.Contact {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 50vh; */
+  /* background-color:antiquewhite; */
+}
+/*form {
+    max-width: 600px;
+    width: 100%;
+    background: #9d7e54; 
+    padding: 20px 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #1e1e1e;
+    color:black;
+    margin: 20px; 
+}  */
+
+form h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 5px;
+  font-family: "Momo Trust Display", "poppins", sans-serif;
+}
+
+.contact.form_box .user_box input {
+  border: 2px solid #9d7e54;
+  color: #000;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.contact.form_box .user_box textarea {
+  border: 2px solid #9d7e54;
+  color: #000;
+  font-size: 18px;
+  border-radius: 6px;
+  width: 100%;
+  padding: 10px 5px;
+  margin: 0 10px;
+}
+
+.contact.form_box .user_box input {
+  margin-left: 10px;
+}
+
+form .input-box {
+  margin-top: 5px;
+}
+/* .input-box .field {
+    width: 90%;
+    height: 30px;
+    background: transparent;
+    border: 2px solid #9d7e54;
+    outline: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    color:black;
+    margin-top: 6px;
+} */
+
+/* textarea {
+    width: 563px; 
+     height: 86px;
+} */
+
+.btn-lg.contact-btn {
+  border-radius: 6px;
+  margin: 20px 0 0 10px;
+}
+
+.btn-lg.contact-btn:hover {
+  border: 2px solid #9d7e54;
+  color: #000;
+}
+
+@media screen and (max-width: 500px) {
+  .btn-lg.contact-btn {
+    height: 45px;
+    width: 180px;
+  }
+}
