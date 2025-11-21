@@ -4,7 +4,7 @@
   position: relative;
 }
 
-.swiper {
+.swiper.header {
   height: 100vh !important;
   width: 100% !important;
 }
