@@ -1,9 +1,101 @@
 .update .screen_wrapper {
-    width: 600px;
-    height: 700px;
-    backdrop-filter:blur(10px);
+    width: 100%;
+    max-width: 400px;
+    height: 450px;
+    backdrop-filter:blur(15px);
     text-align: center;
     grid-template-columns: repeat(1, 1fr);
     box-shadow: 2px 2px 2px #ffffff94; inset: 3px 3px 10px #ffffff39;
+    margin: 0px 3px;  
+
     
+}
+  
+.update h2{
+    margin-top: 20px;
+    margin-bottom:5px;
+    text-align: center;
+}
+.update small{
+    font-family: "Momo Trust Display", "poppins", sans-serif;
+    font-size:16px ;
+    
+}
+.project{
+
+ border: 2px solid;
+    color:transparent;
+    font-size: 18px;
+    border-radius: 6px;
+
+}
+.project .field{
+    width: 95%;
+    height:50px;
+    background-color: transparent;
+    outline:none;
+    border:2px solid white;
+    border-radius: 6px;
+    padding:10px ;
+    margin:8px 0px ;
+    font-size: 16px;
+    color:white ;
+
+
+}
+.project .field::placeholder{
+    color: white;
+}
+
+.btnss {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.btnss .Keyholder{
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: 1s ease-in-out;
+    margin:0px 10px ;
+}
+.btnss .interest{
+    height: 50px;
+    margin: 0px 10px 10px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background-color: #cb5c00;
+    color: #fff;
+    transition: 1s ease-in-out;
+}
+
+.btnss .Keyholder:hover, .interest:hover{
+       background-color: transparent;
+    transition: 1s ease-in-out;
+    color: #fff;
+    transform: scale(0.95);
+    border: 2px solid #fff;
+}
+
+@media screen and (min-height:500px) {
+    .update .screen_wrapper {
+        max-width: 420px;
+    }
+
+    .project .field {
+        margin: 8px auto;
+    }
+
+    .update-form {
+        margin: 1em auto;
+    }
 }
