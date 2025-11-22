@@ -6,7 +6,38 @@ const RoomsRating = () => {
   const navigate = useNavigate()
   return (
     <>
-    <div className="room-header-img"></div>
+    <div className="room-header-img">
+      <h1>Rooms</h1>
+    </div>
+
+
+     <div className="booking-bar">
+      <div className="booking-item">
+        <label>Check In</label>
+        <input type="date" />
+      </div>
+
+      <div className="booking-item">
+        <label>Check Out</label>
+        <input type="date" />
+      </div>
+
+      <div className="booking-item">
+        <label>Guests</label>
+        <select>
+          <option>1 Guest</option>
+          <option>2 Guests</option>
+          <option>3 Guests</option>
+          <option>4 Guests</option>
+          <option>5+ Guests</option>
+        </select>
+      </div>
+
+      <button className="check-btn">Check Availability</button>
+    </div>
+
+
+
     <div className='wholebody section'>
       <small className="section_Heading">Luxury Rooms</small>
         <h2 className="section_Title">
