@@ -36,7 +36,7 @@ const Amenities = () => {
         >
           <SwiperSlide className="amen_slide">
             <div className="amenities_items item1">
-              <img src={Pool_Img} alt="amenities-img" />
+             <img src={Pool_Img} alt="amenities-img" />
 
               <div className="amenities_content">
                 <h2>Swimming Pool</h2>
