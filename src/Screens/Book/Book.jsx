@@ -84,7 +84,7 @@ const Book = () => {
                   <button className="btn-lg book-btn">
                     <Link to="/">Confirm Booking</Link>
                   </button>
-                  <button className="btn-sm">
+                  <button className="btn-sm home-btn">
                     <Link to="/">Go to home</Link>
                   </button>
                 </div>

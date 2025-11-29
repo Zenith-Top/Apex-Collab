@@ -13,7 +13,7 @@ const Header = () => {
           slidesPerView={1}
           spaceBetween={0}
           loop={true}
-          className="swiper"
+          className="swiper header"
           autoplay={{
             delay: 2500,
           }}

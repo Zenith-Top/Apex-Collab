@@ -128,10 +128,17 @@ td .action-btn:nth-child(2):hover {
   }
 
   tbody td {
-    font-size: 14px;
+    font-size: 12px;
+    padding: 10px 9px;
   }
 
-  /* td .action-btn {
-    margin-bottom: 5px;
-  } */
+  .actions {
+    gap: 3px;
+  }
+
+  td .action-btn {
+    font-size: 12px;
+    height: 25px;
+    width: 60px;
+  }
 }

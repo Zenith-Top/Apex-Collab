@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.room-header-img {
+  min-height: 50vh;
+  background: url(../../assets/RRimages/Presidential.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.room-header-img h1 {
+    background-color: #cb5b009c;
+    font-size: 50px;
+    color: #fff;
+    padding: 0px 20px;
+    border-style: ridge;
+    font-family: "Momo Trust Display", "poppins", sans-serif;
+    letter-spacing: 4px;
+}
+
+.room-header-img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+
+
+.Rooms_Class_Container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.img1 {
+    background-image: url(../../assets/RRimages/Standard.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.img2 {
+    background-image: url(../../assets/RRimages/Deluxe.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.img3 {
+    background-image: url(../../assets/RRimages/Family.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.img4 {
+    background-image: url(../../assets/RRimages/Premium.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.img5 {
+    background-image: url(../../assets/RRimages/Exclusive.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.img6 {
+    background-image: url(../../assets/RRimages/Presidential.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.room-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    margin: 30px 60px;
+    transition: 1s ease-in-out;
+}
+
+.room-content h3 {
+    margin-bottom: 10px;
+}
+
+.room-content:hover {
+    border: 2px solid;
+    border-color: #cb5c00;
+    padding: 20px;
+    transition: 1s ease-in-out;
+}
+
+.room-btn {
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.room-btn:hover {
+    border-color: #cb5c00;
+    color: #cb5c00;
+}
+
+
+
+.booking-bar {
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.booking-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-item label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.booking-item input,
+.booking-item select {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.check-btn {
+  padding: 15px 25px;
+  background-color: #cb5c00;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.check-btn:hover {
+    border: 2px solid;
+    background-color: #fff;
+  border-color: #cb5c00;
+  color: #cb5c00;
+  transition:  0.5s ease-in-out;
+}
+
+
+
+@media (max-width: 992px) {
+  .room-header-img {
+    min-height: 40vh;
+    background-position: center center;
+  }
+
+  .room-header-img h1 {
+    font-size: 38px;
+    padding: 5px 18px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .room-header-img {
+    min-height: 35vh;
+  }
+
+  .room-header-img h1 {
+    font-size: 32px;
+    padding: 5px 16px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .room-header-img {
+    min-height: 30vh;
+  }
+
+  .room-header-img h1 {
+    font-size: 26px;
+    padding: 4px 14px;
+    border-width: 2px;
+  }
+}

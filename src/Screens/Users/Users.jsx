@@ -50,8 +50,8 @@ const Users = () => {
           <div className="table-header-img"></div>
           <div className="table-header">
             <h1>Student List</h1>
-            <button className="btn-lg back-btn">
-              <Link to="/specials">Back</Link>
+            <button className="btn-lg back-btn" onClick={() => navigate(-1)}>
+              Back
             </button>
           </div>
 
@@ -75,16 +75,16 @@ const Users = () => {
                         {user.firstName} {user.lastName}
                       </td>
                       <td>{user.email}</td>
-                      <td className='actions' align="center">
+                      <td className="actions" align="center">
                         <button
                           className="btn-sm action-btn"
-                          // onClick={() => navigate(`/users/${user._id}`)}
+                          onClick={() => navigate(`/users/${user._id}`)}
                         >
                           View
                         </button>
                         <button
                           className="btn-sm action-btn"
-                          //onClick={() => navigate(`/users/edit/${user._id}`)}
+                          onClick={() => navigate(`/users/edit/${user._id}`)}
                         >
                           Edit
                         </button>
