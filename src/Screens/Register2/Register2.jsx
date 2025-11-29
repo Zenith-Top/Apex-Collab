@@ -179,132 +179,197 @@ const Signup = () => {
 
   return (
     <>
- <div className='hello'>
-  
-   
+      <div className="hello">
+        <div className="gap">
+          <div className="lash">
+            <span>
+              <h1
+                style={{
+                  color: "whitesmoke",
+                  textAlign: "left",
+                  fontWeight: "lighter",
+                  padding: "15px",
+                }}
+              >
+                <span
+                  className="kin"
+                  style={{
+                    color: "cadetblue",
+                    borderRadius: "70px",
+                    padding: "15px",
+                    paddingTop: "5px",
+                    paddingBottom: "5px",
+                    backgroundColor: "white",
+                    margin: "10px",
+                    fontSize: "50px",
+                    border: "none",
+                  }}
+                >
+                  H
+                </span>
+                Home Away
+              </h1>
+            </span>
 
-  <div className='gap'>
+            <div className="spider">
+              <FaArrowLeft
+                style={{
+                  position: "relative",
+                  top: "60px",
+                  borderRadius: "50px",
+                  border: "none",
+                  paddingTop: "10px",
+                  paddingBottom: "10px",
+                  textAlign: "center",
+                  padding: "10px",
+                  marginLeft: "10px",
+                  backgroundColor: "cadetblue",
+                }}
+              />
 
-    <div className='lash'>
+              <span
+                style={{
+                  paddingLeft: "100px",
+                  textAlign: "left",
+                  paddingBottom: "20px",
+                }}
+              >
+                {" "}
+                away from home, <br /> yet feels like home
+              </span>
+            </div>
+          </div>
 
-    <span>
+          <div className="chip">
+            <h3 style={{ textAlign: "center", padding: "20px" }}>
+              <FaUser /> <br /> {error || "signup"} <br /> on
+            </h3>
 
-      <h1  style={{color:'whitesmoke', textAlign:'left', fontWeight:'lighter', padding:'15px'}}>   
-      
-      <span className='kin' style={{color:'cadetblue', borderRadius:'70px', padding:'15px', paddingTop:'5px', paddingBottom:'5px', backgroundColor:'white', margin:'10px', fontSize:'50px', border:'none'}}>H</span>
+            {/* made  changes here in  the user link */}
+            <div className="elf">
+              <button className="hy">
+                <Link
+                  to="/user"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  user{" "}
+                </Link>
+              </button>
 
-       Home Away</h1>
+              <button className="fish">
+                <Link
+                  to="/business"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Business
+                </Link>{" "}
+              </button>
+            </div>
 
-       </span>
- 
-
-    <div className='spider'> 
-
-     <FaArrowLeft
-      style={{position:'relative', top:'60px', borderRadius:'50px', border:'none', paddingTop:'10px', paddingBottom:'10px', textAlign:'center', padding:'10px', marginLeft:'10px', backgroundColor:'cadetblue', 
-       }}
-      /> 
-
-     <span style={{ paddingLeft:'100px', textAlign:'left', paddingBottom:'20px'}}> away from home, <br /> yet feels like home</span> 
-    </div>
-
-    </div>
-
-    <div className='chip'>
-    
-      <h3 style={{textAlign:'center', padding:'20px'}}>
-  <FaUser/> <br /> { error || 'signup' } <br /> on
-</h3>
-
-      
-      {/* made  changes here in  the user link */}
-    <div className='elf'>  
-    <button  className='hy'><Link to='/user' style={{textDecoration:'none', color:'white'}}>user </Link>
-    
-    </button>
-
-
-
-
-    <button className='fish'><Link to='/business' style={{textDecoration:'none', color:'white'}} >Business</Link> </button> 
-    </div>
-      
-<div>
-
-    <div className='fat'>
-
-  <form action="" onSubmit={handleSignup} >
-
-    <div className='digit'>
-    <input type="text" placeholder='First name' className='two' 
-     value={firstName}
-      onChange={(e) => setFirstName(e.target.value)} 
-    /> 
-
-     <input type="text" placeholder='Last Name' className='two' 
-     value={lastName}
-      onChange={(e) => setLastName(e.target.value)}
-    /> <br /> <br />
-    </div> <br />
-
-    <input type="Email" placeholder='Email' className='one'
-     value={email}
-     onChange={(e) => setEmail(e.target.value)}
-    /> <br /> <br />
-    <input   type="password" placeholder='password '  className='one'
-    value={password}
-     onChange={(e) => setPassword(e.target.value)} 
-    />  <br /> <br />
-
-     <input   type="phoneNumber" placeholder='phonenumber '  className='one'
-    value={phoneNumber}
-     onChange={(e) => setPhoneNumber(e.target.value)} 
-    />  <br />  <br />
-    
- 
-    <div className='juice'>
-  
-      <input type="checkbox" />
-      <label htmlFor="termsCheck"> i agree to the terms and condition  
-      </label>
-      {/* <select name="" id=""> 
+            <div>
+              <div className="fat">
+                <form action="" onSubmit={handleSignup}>
+                  <div className="digit">
+                    <input
+                      type="text"
+                      placeholder="First name"
+                      className="two"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                    />
+                    <input
+                      type="text"
+                      placeholder="Last Name"
+                      className="two"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                    />{" "}
+                    <br /> <br />
+                  </div>{" "}
+                  <br />
+                  <input
+                    type="Email"
+                    placeholder="Email"
+                    className="one"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />{" "}
+                  <br /> <br />
+                  <input
+                    type="password"
+                    placeholder="password "
+                    className="one"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />{" "}
+                  <br /> <br />
+                  <input
+                    type="phoneNumber"
+                    placeholder="phonenumber "
+                    className="one"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                  />{" "}
+                  <br /> <br />
+                  <div className="juice">
+                    <input type="checkbox" />
+                    <label htmlFor="termsCheck">
+                      {" "}
+                      i agree to the terms and condition
+                    </label>
+                    {/* <select name="" id=""> 
       <option value="" style={{textWrap:'wrap', width:'10rem'}}>
       </option>
        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quas quisquam dolor aliquid alias. Exercitationem praesentium tenetur velit sequi possimus?
       </select> */}
-     
-    </div>
+                  </div>
+                  <div style={{ textAlign: "center" }}>
+                    <button
+                      style={{
+                        width: "50%",
+                        height: "4vh",
+                        backgroundColor: "cadetblue",
+                        border: "none",
+                        color: "white",
+                        margin: "5px",
+                      }}
+                    >
+                      {" "}
+                      signup{" "}
+                    </button>{" "}
+                    <br />
+                  </div>
+                  <div
+                    className="hog"
+                    style={{
+                      display: "flex",
+                      gap: "5px",
+                      justifyContent: "center",
+                      margin: "10px",
+                    }}
+                  >
+                    <button
+                      onClick={() =>
+                        (window.location.href = "https://google.com")
+                      }
+                    >
+                      {" "}
+                      <a href="google.com"></a> <FaGoogle /> Continue with
+                      Google
+                    </button>{" "}
+                    <br /> <br />
+                    <button>
+                      {" "}
+                      <FaApple /> Continue with Apple
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-
-
- <div style={{textAlign:'center',}}>
-
-<button style={{width:'50%', height:'4vh', backgroundColor:'cadetblue', border:'none', color:'white', margin:'5px' }}> signup </button> <br />  
-</div>
-
-
-
-
-<div className='hog' style={{display:'flex', gap:'5px', justifyContent:'center', margin:'10px' }}>
-  <button  onClick={() => window .location. href= "https://google.com"}> <a href="google.com"></a> <FaGoogle/> Continue with Google</button> <br /> <br />
-  <button> <FaApple/> Continue with Apple</button>
-</div>
-
-    
-    </form>
-
-    </div>
-
-
-</div>
-
-    </div>
-
-  </div>
-
-    </div>
-
-</>
       <div className="screen_con">
         <div className="screen_wrapper register">
           {/* picture div */}
