@@ -112,121 +112,192 @@
 
 // export default Login2;
 
-
-
-import React from 'react'
-import { FaHome, FaGoogle, FaApple} from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { FaHome, FaGoogle, FaApple } from "react-icons/fa";
+import { Link } from "react-router-dom";
 // import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
-import './Login2.css'
-import { useState } from 'react'
+import axios from "axios";
+import "./Login2.css";
+import { useState } from "react";
 const Login = () => {
-
-
   // const navigate = useNavigate();
-  const [email, setEmail]=useState('');
-  const [password, setPassword]=useState('');
-  const [error, setError] = useState('');
-  let Handlelogin = async ()=>{
-    setLoading(true)
-    setError ("")
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  let Handlelogin = async () => {
+    setLoading(true);
+    setError("");
 
-  try {
-    const great = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/auth/login`,{email, password})
-    console.log(great)
-    navigate('')
-    
-  } catch (error) {
-    console.error(error)
-    setError(error)
-    setLoading(false)
-  }
-}
+    try {
+      const great = await axios.post(
+        `${import.meta.env.VITE_BASE_URL}/api/auth/login`,
+        { email, password }
+      );
+      console.log(great);
+      navigate("");
+    } catch (error) {
+      console.error(error);
+      setError(error);
+      setLoading(false);
+    }
+  };
   return (
-   <>
+    <>
+      <div className="name">
+        <div className="pic">
+          <div
+            className="go"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              padding: "20px",
+              textWrap: "nowrap",
+            }}
+          >
+            {/* made changes */}
+            <h2
+              className="signup-logo"
+              style={{
+                textalign: "center",
+                color: "#cb5c00",
+                paddingTop: "10px",
+              }}
+            >
+              {" "}
+              <FaHome color="white" /> {error ? error : "Apex Hotels"}{" "}
+              <hr className="nice" style={{ width: "7rem" }} />
+            </h2>
 
-    <div className='name'>
-    <div className='pic'>
+            <div
+              className="pink text"
+              style={{ display: "flex", flexDirection: "column", gap: "5px" }}
+            >
+              <span
+                style={{
+                  backgroundColor: "#9d7e54",
+                  color: "white",
+                  padding: "8px",
+                  paddingTop: "10px",
+                }}
+              >
+                Find more than a{" "}
+                <span style={{ fontSize: "20px" }}>
+                  {" "}
+                  <b>home.</b>
+                </span>
+              </span>
 
-<div className='go' style={{display:'flex',justifyContent:'space-around', padding:'20px', textWrap:'nowrap' }}>
+              <span style={{ color: "white", padding: "10px" }}>
+                Find your{" "}
+                <span style={{ fontSize: "20px" }}>
+                  {" "}
+                  <b>space </b>{" "}
+                  <hr style={{ display: "inline", margin: "10px" }} />
+                </span>
+              </span>
+            </div>
+          </div>
 
-  {/* made changes */}
-   <h2  style={{ textAlign:'center', color:'white', paddingTop:'10px', }}> <FaHome/>  {error ? error : "Hotel H"} <hr className='nice' style={{width:'7rem',}} />
-   </h2>
-
-<div className='pink' style={{display:'flex', gap:'20px'}}>
-  <span style={{ backgroundColor:'black', color:'white', padding:'8px', paddingTop:'10px', }}>Find more than a <span style={{fontSize:'20px',}}> <b>home.</b></span></span> 
-
-  <span style={{color:'white',padding:'10px',}}>Find your <span style={{fontSize:'20px'}} > <b>space </b>  <hr style={{display:'inline',margin:'10px'}} /></span>
-  </span>
-  </div>
-
-  </div>
- 
-      
-  
-
-<div className='left'>
-
-
-
-
-  
-
-
-<form action="" style={{ }}>
-
-<h2> Welcome Back to hotel Haux la font!</h2>
-<p>login to your your account to explore our hotel</p> <br />
-
-
-  <label htmlFor="">Email</label> <br />   <input type="email" placeholder='Email address' style={{width:'97%',height:'5vh',}} 
-  value={ email}
-   onChange={(e) => setEmail(e.target.value)} 
-  
-  /> <br /> <br />
-
-    <label htmlFor=""> password</label>  <br /> <input type="password"  placeholder='Password' style={{width:'97%', height:'5vh', }} value={ password}
-   onChange={(e) => setPassword(e.target.value)} /> <br /> <br />
-
-
-    <a href="" style={ {display:'flex', justifyContent:'right', color:'black'}}>forget Password</a>
-  
-    
-    <div>
-      <span><input type="checkbox" /> Remember me</span> <br /> 
-
-    </div>
-
-<p><button style={{width:'100%', backgroundColor:'black', color:'white',height:'5vh' }}    onClick={Handlelogin} >Login</button></p> <br />
-
-<p style={{textAlign:'center',}}>Don't have an account? <Link to='/sign_up' style={{color:'black'}} >Signup</Link></p> <br /> 
-
-<div className='dust'>
- 
-  <span className='frog'><hr /></span>
-  <span style={{position:'relative', bottom:'6px', paddingRight:'5px' }}>or</span>
-  <span className='frog'><hr /></span>
- 
-  </div>
-
-
-<div>
-  <button style={{width:'100%',height:'5vh'}} onClick={() => window .location. href= "https://google.com"}> <a href="google.com"></a> <FaGoogle/> Continue with Google</button> <br /> <br />
-  <button style={{width:'100%',height:'5vh'}}> <FaApple/> Continue with Apple</button>
-</div>
-</form>
-
-</div>
-
-
-
-
-    </div>
-     </div>
+          <div className="left">
+            <form className="signup-form" action="" style={{}}>
+              <h2> Welcome Back </h2>
+              <p textalign="center">
+                Login to your your account to explore our hotel
+              </p>{" "}
+              <br />
+              <label htmlFor="">Email</label> <br />{" "}
+              <input
+                type="email"
+                placeholder="Email address"
+                style={{ width: "97%", height: "5vh" }}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />{" "}
+              <br /> <br />
+              <label htmlFor=""> password</label> <br />{" "}
+              <input
+                type="password"
+                placeholder="Password"
+                style={{ width: "97%", height: "5vh" }}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />{" "}
+              <br /> <br />
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-betwen",
+                  color: "black",
+                }}
+              >
+                <a href="" color="black" className="forgot-a">
+                  Forgot Password?
+                </a>
+                <span>
+                  <input type="checkbox" /> Remember me
+                </span>{" "}
+                <br />
+              </div>
+              <p>
+                <button
+                  style={{
+                    width: "100%",
+                    backgroundColor: "black",
+                    color: "white",
+                    height: "5vh",
+                  }}
+                  onClick={Handlelogin}
+                >
+                  Login
+                </button>
+              </p>{" "}
+              <br />
+              <p style={{ textAlign: "center" }}>
+                Don't have an account?{" "}
+                <Link to="/sign_up" style={{ color: "black" }}>
+                  Signup
+                </Link>
+              </p>{" "}
+              <br />
+              <div className="dust">
+                <span className="frog">
+                  <hr />
+                </span>
+                <span
+                  style={{
+                    position: "relative",
+                    bottom: "6px",
+                    paddingRight: "5px",
+                  }}
+                >
+                  or
+                </span>
+                <span className="frog">
+                  <hr />
+                </span>
+              </div>
+              <div>
+                <button
+                  className="google-btn"
+                  style={{ width: "100%", height: "5vh" }}
+                  onClick={() => (window.location.href = "https://google.com")}
+                >
+                  {" "}
+                  <a href="google.com"></a> <FaGoogle /> Continue with Google
+                </button>{" "}
+                <br />
+                {/* <br /> */}
+                <button style={{ width: "100%", height: "5vh" }}>
+                  {" "}
+                  <FaApple /> Continue with Apple
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

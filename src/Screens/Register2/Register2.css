@@ -76,240 +76,193 @@
     padding: 15px 100px;
   }
 } */
-*{margin:0;
-padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-
-
-.hello{
-    background-color:rgb(245, 68, 4);
-    padding: 40px;
-    width: auto;
-
+.hello {
+  background-color: #cb5c00;
+  padding: 40px;
+  width: auto;
 }
 
-
-
-
-.gap{
- display: flex;
- background-color: white;
- 
+.gap {
+  display: flex;
+  background-color: white;
 }
 
-
-.lash{
-    background-image: url(./src/assets/visualsofdana.jpg); 
-   background-size: cover;
-   margin: 20px;
-   border-radius: 10px;
-   flex: 1; 
-   
+.lash {
+  background-image: url(./src/assets/visualsofdana.jpg);
+  background-size: cover;
+  margin: 20px;
+  border-radius: 10px;
+  flex: 1;
 }
 
-
-.chip{
-flex: 1;
-padding: 50px;
-/* min-width: fit-content; */
-
+.chip {
+  flex: 1;
+  padding: 50px;
+  /* min-width: fit-content; */
 }
 
-
-.spider{
-display: grid;
-align-content: end;
-height: 80vh;
-text-align: left;
-color: white;
-font-size: xx-large;
-font-variant: small-caps;
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+.spider {
+  display: grid;
+  align-content: end;
+  height: 80vh;
+  text-align: left;
+  color: white;
+  font-size: xx-large;
+  font-variant: small-caps;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.elf{
- display: flex;
-gap: 20px;
+.elf {
+  display: flex;
+  gap: 20px;
   justify-content: center;
   padding-bottom: 20px;
-
 }
 
-
-.hy{
-    background-color: cadetblue;
-    border: none;
-    width:20%;
-    height: 4vh;
-    /* color: white; */
+.hy {
+  background-color: #9d7e54;
+  border: none;
+  width: 20%;
+  height: 4vh;
+  /* color: white; */
 }
 
-.fish{
-    
-    width: 20%;
-    height: 4vh;
-    background-color: cadetblue;
-    border: none;
+.fish {
+  width: 20%;
+  height: 4vh;
+  background-color: #9d7e54;
+  border: none;
 }
 
-.fat{
-text-align: center;
-
+.fat {
+  text-align: center;
 }
-
 
 /* input tag */
-.one{
-height: 5vh;
-width: 51%;
-margin-top: 5px;
+.one {
+  height: 5vh;
+  width: 51%;
+  margin-top: 5px;
 }
 
-
-.two{
-height: 4vh;
-width: 25%;
-padding-top: 5px;
-
+.two {
+  height: 4vh;
+  width: 25%;
+  padding-top: 5px;
 }
 
-.digit{
-    display: flex;
-gap: 15px;
-justify-content: center;
-padding-left: 20px;
-
+.digit {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding-left: 20px;
 }
 /* stop */
 
-
-.pie{
-    display:flex;
-    justify-content: center;
-    
+.pie {
+  display: flex;
+  justify-content: center;
 }
 
-
-
-
-
-@media( max-width:420px){
-.left{
-    width:70%;
-    position:relative;
+@media (max-width: 420px) {
+  .left {
+    width: 70%;
+    position: relative;
     top: 100px;
-    left: 30px; 
+    left: 30px;
+  }
 
-}
+  .go h2 {
+    position: relative;
+    bottom: 20px;
+  }
 
-.go h2{
-position: relative;
-bottom: 20px;
-}
+  .nice {
+    position: relative;
+  }
 
- .nice{
-position: relative;
-}
+  .fat input {
+    width: 80%;
+  }
 
-.fat input{
-width: 80%;
-
-}
-
-.digit{
+  .digit {
     padding-top: 5px;
-}
+  }
 
-.lap{
- 
+  .lap {
     /* padding-left: 20px;  */
-   
-}
+  }
 
-.juice{
-display: none;
-}
+  .juice {
+    display: none;
+  }
 
-   .go{
+  .go {
     flex-wrap: wrap;
-background-color: rgb(97, 20, 20);
-margin: 5px;
-border-radius: 5px;
+    background-color: rgb(97, 20, 20);
+    margin: 5px;
+    border-radius: 5px;
+  }
 
- }
+  .pink {
+  }
 
- .pink{
- 
- }
-
-  .lash{
+  .lash {
     margin: 10px;
     background-position: center;
-    
+  }
 
-    }
+  .chip {
+  }
 
-    .chip{
-        
-    }
-
-.pot{
-        
-     width: 80%; 
-     padding-left: 30px;  
+  .pot {
+    width: 80%;
+    padding-left: 30px;
     padding-bottom: 30px;
-    }
+  }
 
-    .hy{
-    width:30%;
+  .hy {
+    width: 30%;
+  }
 
-    }
+  .fish {
+    width: 30%;
+  }
 
-    .fish{
-    width:30%;
-    
-    }
-
-
-.gap{
+  .gap {
     flex-wrap: wrap;
+  }
+
+  .hog button {
+  }
 }
 
-.hog button{
-
+.dust {
+  display: flex;
+  gap: 10px;
 }
-}
-
-
-
-.dust{
-    display: flex;
-    gap: 10px;
-
-}
-.frog{
-    width: 11rem;
-
+.frog {
+  width: 11rem;
 }
 
-.loop{
-     /* height: 40vh;
+.loop {
+  /* height: 40vh;
   width: 100% ; */
-  
 }
-.git{
-height: 50vh;
+.git {
+  height: 50vh;
 
-    /* display: flex;
+  /* display: flex;
     flex-direction: row;
     justify-items: center; */
 }
 
-.knot{
-width: 100%;
-height: 70vh;
+.knot {
+  width: 100%;
+  height: 70vh;
 }
-
-

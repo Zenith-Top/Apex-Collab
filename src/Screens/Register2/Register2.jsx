@@ -193,21 +193,24 @@ const Signup = () => {
               >
                 <span
                   className="kin"
+                  // style={{
+                  //   color: "cadetblue",
+                  //   borderRadius: "70px",
+                  //   padding: "15px",
+                  //   paddingTop: "5px",
+                  //   paddingBottom: "5px",
+                  //   backgroundColor: "white",
+                  //   margin: "10px",
+                  //   fontSize: "50px",
+                  //   border: "none",
+                  // }}
                   style={{
-                    color: "cadetblue",
-                    borderRadius: "70px",
-                    padding: "15px",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                    backgroundColor: "white",
-                    margin: "10px",
-                    fontSize: "50px",
-                    border: "none",
+                    color: "#cb5c00",
                   }}
                 >
-                  H
+                  Apex
                 </span>
-                Home Away
+                Hotels
               </h1>
             </span>
 
@@ -223,7 +226,7 @@ const Signup = () => {
                   textAlign: "center",
                   padding: "10px",
                   marginLeft: "10px",
-                  backgroundColor: "cadetblue",
+                  backgroundColor: "#cb5c00",
                 }}
               />
 
@@ -241,7 +244,12 @@ const Signup = () => {
           </div>
 
           <div className="chip">
-            <h3 style={{ textAlign: "center", padding: "20px" }}>
+            <h3
+              style={{
+                textAlign: "center",
+                padding: "20px",
+              }}
+            >
               <FaUser /> <br /> {error || "signup"} <br /> on
             </h3>
 
@@ -250,9 +258,12 @@ const Signup = () => {
               <button className="hy">
                 <Link
                   to="/user"
-                  style={{ textDecoration: "none", color: "white" }}
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                  }}
                 >
-                  user{" "}
+                  User{" "}
                 </Link>
               </button>
 
@@ -315,7 +326,7 @@ const Signup = () => {
                     <input type="checkbox" />
                     <label htmlFor="termsCheck">
                       {" "}
-                      i agree to the terms and condition
+                      I agree to the terms and condition
                     </label>
                     {/* <select name="" id=""> 
       <option value="" style={{textWrap:'wrap', width:'10rem'}}>
@@ -328,14 +339,14 @@ const Signup = () => {
                       style={{
                         width: "50%",
                         height: "4vh",
-                        backgroundColor: "cadetblue",
+                        backgroundColor: "#9d7e54",
                         border: "none",
                         color: "white",
                         margin: "5px",
                       }}
                     >
                       {" "}
-                      signup{" "}
+                      Signup{" "}
                     </button>{" "}
                     <br />
                   </div>
@@ -365,97 +376,6 @@ const Signup = () => {
                   </div>
                 </form>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="screen_con">
-        <div className="screen_wrapper register">
-          {/* picture div */}
-          <div className="col_1"></div>
-
-          <div className="col_2">
-            <div className="form_box">
-              <h1>{error ? error : "Create an Account"}</h1>
-
-              {/* Put your onSubmit action here */}
-              <form onSubmit={handleRegister}>
-                <div className="user_box">
-                  <input
-                    type="firstname"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    required
-                  />
-                  <label htmlFor="firstname">First Name</label>
-                </div>
-                <div className="user_box">
-                  <input
-                    type="lastname"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    required
-                  />
-                  <label htmlFor="lastname">Last Name</label>
-                </div>
-                <div className="user_box">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <label htmlFor="email">Email</label>
-                </div>
-                <div className="user_box">
-                  <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                  />
-                  <label htmlFor="password">Password</label>
-                </div>
-                <div className="user_box">
-                  <input
-                    type="phonenumber"
-                    value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    required
-                  />
-                  <label htmlFor="phonenumber">Phone Number</label>
-                </div>
-                <div className="user_box">
-                  <input
-                    type="address"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
-                    required
-                  />
-                  <label htmlFor="address">Address</label>
-                </div>
-                <button type="submit" className="submit-btn">
-                  {loading ? (
-                    <InfinitySpin
-                      color="#fff"
-                      size={12}
-                      width={100}
-                      height={50}
-                      margin={0}
-                      loading={loading}
-                      className="loader"
-                    />
-                  ) : (
-                    "Register"
-                  )}
-                </button>
-
-                <div className="switch">
-                  <span>Already have an account?</span>
-                  <Link to="/sign_in">Sign In</Link>
-                </div>
-              </form>
             </div>
           </div>
         </div>
