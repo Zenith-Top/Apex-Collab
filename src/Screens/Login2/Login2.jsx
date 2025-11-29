@@ -156,15 +156,17 @@ const Login = () => {
           >
             {/* made changes */}
             <h2
-              className="signup-logo"
               style={{
                 textalign: "center",
-                color: "#cb5c00",
                 paddingTop: "10px",
               }}
             >
               {" "}
-              <FaHome color="white" /> {error ? error : "Apex Hotels"}{" "}
+              <FaHome color="white" />
+              <a href="/">
+                <span className="signup-logo">Apex</span>
+                Hotels
+              </a>{" "}
               <hr className="nice" style={{ width: "7rem" }} />
             </h2>
 
@@ -200,7 +202,7 @@ const Login = () => {
 
           <div className="left">
             <form className="signup-form" action="" style={{}}>
-              <h2> Welcome Back </h2>
+              <h2> {error ? error : "Welcome Back"} </h2>
               <p textalign="center">
                 Login to your your account to explore our hotel
               </p>{" "}
@@ -226,16 +228,25 @@ const Login = () => {
               <div
                 style={{
                   display: "flex",
-                  justifyContent: "space-betwen",
+                  justifyContent: "start",
                   color: "black",
+                }}
+              >
+                <span>
+                  <input type="checkbox" /> Remember me
+                </span>{" "}
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "end",
+                  alignItems: "end",
+                  marginBottom: "10px",
                 }}
               >
                 <a href="" color="black" className="forgot-a">
                   Forgot Password?
                 </a>
-                <span>
-                  <input type="checkbox" /> Remember me
-                </span>{" "}
                 <br />
               </div>
               <p>
@@ -266,7 +277,7 @@ const Login = () => {
                 <span
                   style={{
                     position: "relative",
-                    bottom: "6px",
+                    bottom: "12px",
                     paddingRight: "5px",
                   }}
                 >
