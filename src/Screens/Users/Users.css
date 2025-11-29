@@ -52,6 +52,10 @@ table {
   color: #000;
 }
 
+thead {
+  position: relative;
+}
+
 thead th {
   position: sticky;
   top: 0;
@@ -121,15 +125,14 @@ td .action-btn:nth-child(2):hover {
 @media screen and (max-width: 500px) {
   .table_wrapper {
     min-width: 400px;
-    font-size: 16px;
   }
   thead th {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   tbody td {
     font-size: 12px;
-    padding: 10px 9px;
+    padding: 10px 8px;
   }
 
   .actions {

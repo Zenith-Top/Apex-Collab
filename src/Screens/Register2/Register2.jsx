@@ -3,6 +3,7 @@ import "./Register2.css";
 import { Link, useNavigate } from "react-router-dom";
 import { InfinitySpin } from "react-loader-spinner";
 import axios from "axios";
+import "../../App";
 
 const Register2 = () => {
   const navigate = useNavigate();
@@ -115,6 +116,7 @@ const Register2 = () => {
                       height={50}
                       margin={0}
                       loading={loading}
+                      className="loader"
                     />
                   ) : (
                     "Register"

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Router, useLocation } from "react-router-dom";
 import "./App.css";
 import Nav from "./Components/Nav/Nav";
 import Home from "./Components/Home/Home";
@@ -18,9 +18,14 @@ import ViewUsers from "./Screens/ViewUsers/ViewUsers";
 import RoomsRating from "./Components/RoomsRating/RoomsRating";
 
 function App() {
+  const location = useLocation();
+  const hideOnPaths = ["/sign_in", "/sign_up", "/book", "/student_list"];
+  const shouldShowNavAndFooter = !hideOnPaths.includes(location.pathname);
+
   return (
     <>
-      <Nav />
+      {shouldShowNavAndFooter && <Nav />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign_in" element={<Login />} />
@@ -35,7 +40,7 @@ function App() {
         <Route path="/users/:id" element={<ViewUsers />} />
       </Routes>
 
-      <Footer />
+      {shouldShowNavAndFooter && <Footer />}
     </>
   );
 }

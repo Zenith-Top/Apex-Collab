@@ -1,3 +1,13 @@
+.contact-header-img {
+  min-height: 60vh;
+  background: url(../../assets/Contact.jpg) no-repeat center;
+  background-size: cover;
+  /* position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
 .Contact {
   display: inline-block;
   justify-content: center;
@@ -5,6 +15,7 @@
   /* min-height: 50vh; */
   /* background-color:antiquewhite; */
 }
+
 /*form {
     max-width: 600px;
     width: 100%;

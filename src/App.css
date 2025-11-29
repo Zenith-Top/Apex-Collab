@@ -216,6 +216,42 @@ form {
   color: #fff;
   border-color: #cb5c00;
 }
+/* 
+.form_box form .submit-btn {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #fff;
+  border-radius: 25px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+  margin-top: 30px;
+  letter-spacing: 1px;
+  border: 3px solid #fff;
+}
+
+.form_box .submit-btn:hover {
+  background-color: #cb5c00;
+  color: #fff;
+  border-color: #cb5c00;
+}
+
+.submit-btn i {
+  font-size: 18px;
+  display: inline-block;
+}
+
+.submit-btn .loader {
+  display: inline-block;
+  margin-right: 10px;
+} */
 
 .switch {
   display: flex;

@@ -2,7 +2,8 @@ import React from "react";
 import "../Home/Home.css";
 import Header from "../Header/Header";
 import Amenities from "../Amenities/Amenities";
-import Contact from '../Contact/Contact'
+import Contact from "../Contact/Contact";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
@@ -11,8 +12,8 @@ const Home = () => {
         <Header />
         <Amenities />
         <Contact />
-        
       </div>
+      {/* <Footer /> */}
     </>
   );
 };

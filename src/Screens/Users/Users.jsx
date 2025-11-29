@@ -29,7 +29,7 @@ const Users = () => {
   }, []);
 
   const deleteUser = async (_id) => {
-    const confirm = windows.confirm(
+    const confirm = window.confirm(
       "Are you sure you want to delete this user?"
     );
     if (!confirm) return;
