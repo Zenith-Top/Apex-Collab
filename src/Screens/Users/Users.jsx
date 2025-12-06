@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
+import { InfinitySpin } from "react-loader-spinner";
+import "../Users/Users.css";
 
 const Users = () => {
   const navigate = useNavigate();

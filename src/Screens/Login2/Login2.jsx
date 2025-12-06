@@ -143,7 +143,7 @@ const Login = () => {
   };
   return (
     <>
-      <div className="name">
+      <div className="name" style={{ minHeight: "100vh", height: "auto" }}>
         <div className="pic">
           <div
             className="go"
