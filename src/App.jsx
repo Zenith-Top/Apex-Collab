@@ -17,6 +17,7 @@ import Login2 from "./Screens/Login2/Login2";
 import UpdateUser from "./Screens/UpdateUser/UpdateUser";
 import ViewUsers from "./Screens/ViewUsers/ViewUsers";
 import RoomsRating from "./Components/RoomsRating/RoomsRating";
+import About from "./Components/About/About";
 
 function App() {
   const location = useLocation();
@@ -33,7 +34,7 @@ function App() {
         <Route path="/sign_up" element={<Register2 />} />
         <Route path="/rooms" element={<RoomsRating />} />
         <Route path="/specials" element={<Specials />} />
-        <Route path="/about" element={<Amenities />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/book" element={<Book />} />
         <Route path="/student_list" element={<Users />} />

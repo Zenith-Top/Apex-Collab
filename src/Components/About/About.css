@@ -1,0 +1,61 @@
+style 
+    body {
+      font-family: "Arial, sans-serif";
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background-color: #cb5c00;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #cb5c00;
+      margin-bottom: 20px;
+    }
+    #team img, .testimonial img {
+      border-radius: 50%;
+    }
+    .team-member, .testimonial {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    .testimonial {
+      text-align: center;
+    }
+    .testimonial p {
+      font-style: italic;
+    }
+    .testimonial h4 {
+      margin-top: 10px;
+      color: #9d7e54;
+    }
+
+    .about-header-img {
+        min-height: 60vh;
+        background: url(../../assets/about.jpg) no-repeat center;
+        background-size: cover;
+      }
+
+
+/* .team-member img {
+  width: 100px;
+  min-height: 30vh;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+} */
